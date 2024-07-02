@@ -1,0 +1,23 @@
+{
+  "name": "node-express-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js",
+    "start:dev": "nodemon --exec ts-node src/index.ts",
+    "build": "yarn build:server",
+    "build:server": "tsc",
+    "clean": "rmdir /s /q dist",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint --fix",
+    "format": "prettier --write '*/.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.4",
+    "nodemon": "^3.1.4"
+  }
+}
